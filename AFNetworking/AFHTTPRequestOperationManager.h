@@ -210,6 +210,13 @@ NS_ASSUME_NONNULL_BEGIN
                                                     success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                                     failure:(nullable void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (AFHTTPRequestOperation *)HTTPRequestOperationWithHTTPMethod:(NSString *)method
+                                                     URLString:(NSString *)URLString
+                                                    parameters:(id)parameters
+                                                       success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                                                       failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
+
 ///---------------------------
 /// @name Making HTTP Requests
 ///---------------------------
