@@ -149,6 +149,7 @@ static BOOL AFSecKeyIsEqualToKey(SecKeyRef key1, SecKeyRef key2) {
 
 @implementation AFURLConnectionOperation
 @synthesize outputStream = _outputStream;
+@synthesize cancelled = _cancelled;
 
 + (void)networkRequestThreadEntryPoint:(id)__unused object {
     @autoreleasepool {
