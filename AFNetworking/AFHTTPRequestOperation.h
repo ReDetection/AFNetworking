@@ -47,15 +47,21 @@
 /// @name Managing Callback Queues
 ///---------------------------------
 
+#if OS_OBJECT_USE_OBJC == 1
+#define GCD_PROPERTY_TYPE copy
+#else
+#define GCD_PROPERTY_TYPE assign
+#endif
+
 /**
  
  */
-@property (nonatomic, copy) dispatch_queue_t completionQueue;
+@property (nonatomic, GCD_PROPERTY_TYPE) dispatch_queue_t completionQueue;
 
 /**
 
  */
-@property (nonatomic, copy) dispatch_group_t completionGroup;
+@property (nonatomic, GCD_PROPERTY_TYPE) dispatch_group_t completionGroup;
 
 
 ///-----------------------------------------------------------
